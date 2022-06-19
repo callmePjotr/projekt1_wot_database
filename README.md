@@ -11,7 +11,9 @@ In order to try this APP yourself you have to make a pull from my Docker hub
 
     --> CREATE KEYSPACE wot_database WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
     --> run following command in cmd :
-                                       docker run -it -d --name cassandra-database -p 9042:9042 callmepjotr/cassandra (this exposes Port 9042)
+                                       docker run -it -d --name cassandra-database -p 9042:9042 callmepjotr/cassandra 
+                                       (this exposes Port 9042 and creates a new container)
+    --> run the new container
     --> execute test.py by using:
                                         python test.py (just drag and drop to desktop)
                            
