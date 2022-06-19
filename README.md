@@ -10,11 +10,11 @@ In order to try this APP yourself you have to make a pull from my Docker hub
 
 
     --> CREATE KEYSPACE wot_database WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
-    --> CREATE TABLE wot_database.full_tank_list_heavy (nation text, tier int, id timeuuid, name text, PRIMARY KEY (nation, tier) WITH CLUSTERING ORDER BY (tier ASC)
-    --> CREATE TABLE wot_database.full_tank_list_medium (nation text, tier int, id timeuuid, name text, PRIMARY KEY (nation, tier) WITH CLUSTERING ORDER BY (tier ASC)
-    --> CREATE TABLE wot_database.full_tank_list_light (nation text, tier int, id timeuuid, name text, PRIMARY KEY (nation, tier) WITH CLUSTERING ORDER BY (tier ASC)
-    --> CREATE TABLE wot_database.full_tank_list_td (nation text, tier int, id timeuuid, name text, PRIMARY KEY (nation, tier) WITH CLUSTERING ORDER BY (tier ASC)
-    --> CREATE TABLE wot_database.full_tank_list_arty (nation text, tier int, id timeuuid, name text, PRIMARY KEY (nation, tier) WITH CLUSTERING ORDER BY (tier ASC)
+    --> run following command in cmd :
+                                       docker run -it -d --name cassandra-database -p 9042:9042 callmepjotr/cassandra (this exposes Port 9042)
+    --> execute test.py by using:
+                                        python test.py (just drag and drop to desktop)
+                           
 
 after setting up your docker it will only run on localhost (Port 9042 or 7199)
 in order to change that you'll have to make the following changes to your .yaml file
