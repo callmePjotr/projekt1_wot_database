@@ -9,7 +9,8 @@ In order to try this APP yourself you have to make a pull from my Docker hub
 --> in some cases I have experienced an issue, where the needed Keyspace wasn't created, in order to fix this you have to run following commands:
 
 
-    --> CREATE KEYSPACE wot_database WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+    --> CREATE KEYSPACE wot_database WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} 
+                                                        AND durable_writes = true;
     --> run following command in cmd :
                                        docker run -it -d --name cassandra-database -p 9042:9042 callmepjotr/cassandra 
                                        (this exposes Port 9042 and creates a new container)
