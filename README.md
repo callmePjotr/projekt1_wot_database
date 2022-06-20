@@ -23,6 +23,7 @@ in order to change that you'll have to make the following changes to your .yaml 
 file should be located here: cd /etc/cassandra/cassandra.yaml
 
 following changes need to be made to this file:
+
         start_rpc: true
         rpc_address: 0.0.0.0
         broadcast_rpc_address: [node-ip]
